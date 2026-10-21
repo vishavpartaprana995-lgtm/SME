@@ -1,44 +1,291 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SME Projects</title>
+    <meta name="description" content="SME Projects - HTML, CSS and JavaScript practical work">
+    <title>SME Projects | My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f1f5f9;
+            color: #172033;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a, #1d4ed8);
+            color: white;
+            text-align: center;
+            padding: 55px 20px;
+        }
+
+        header h1 {
+            font-size: clamp(30px, 5vw, 46px);
+            margin-bottom: 14px;
+        }
+
+        header p {
+            color: #dbeafe;
+            line-height: 1.7;
+        }
+
+        .container {
+            max-width: 1150px;
+            margin: auto;
+            padding: 32px 20px 50px;
+        }
+
+        .heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 22px;
+        }
+
+        .heading h2 {
+            font-size: 26px;
+        }
+
+        #count {
+            color: #64748b;
+            font-size: 14px;
+        }
+
+        #search {
+            width: 100%;
+            padding: 16px;
+            font-size: 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            outline: none;
+        }
+
+        #search:focus {
+            border-color: #2563eb;
+            box-shadow: 0 0 0 3px #2563eb20;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+            gap: 18px;
+        }
+
+        .project-card {
+            display: block;
+            padding: 23px;
+            background: white;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            color: #172033;
+            text-decoration: none;
+            transition: 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            border-color: #93c5fd;
+            box-shadow: 0 12px 28px #0f172a12;
+        }
+
+        .icon {
+            display: grid;
+            place-items: center;
+            width: 46px;
+            height: 46px;
+            border-radius: 13px;
+            background: #dbeafe;
+            color: #1d4ed8;
+            font-size: 21px;
+            font-weight: bold;
+            margin-bottom: 17px;
+        }
+
+        .project-card h3 {
+            font-size: 17px;
+            margin-bottom: 10px;
+            overflow-wrap: anywhere;
+        }
+
+        .project-card p {
+            color: #64748b;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+
+        .open {
+            display: inline-block;
+            margin-top: 17px;
+            color: #2563eb;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        #empty {
+            display: none;
+            text-align: center;
+            padding: 45px 15px;
+            color: #64748b;
+        }
+
+        footer {
+            padding: 25px 15px;
+            text-align: center;
+            color: #64748b;
+            border-top: 1px solid #e2e8f0;
+            font-size: 13px;
+        }
+
+        @media (max-width: 520px) {
+            .container {
+                padding: 24px 13px 35px;
+            }
+
+            .project-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+                gap: 11px;
+            }
+
+            .project-card {
+                padding: 15px;
+            }
+
+            .project-card h3 {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
-    <h1>My SME Projects</h1>
-    <hr>
+    <header>
+        <h1>SME Projects</h1>
+        <p>My Practical Work Collection</p>
+        <p>HTML · CSS · JavaScript</p>
+    </header>
 
-    <h2>HTML Projects</h2>
-    <ul>
-        <li><a href="agecategory.html">Age Category</a></li>
-        <li><a href="array.html">Array</a></li>
-        <li><a href="calculator.html">Calculator</a></li>
-        <li><a href="days.html">Days</a></li>
-        <li><a href="emailvalidation.html">Email Validation</a></li>
-        <li><a href="employee.html">Employee</a></li>
-        <li><a href="evenarray.html">Even Array</a></li>
-        <li><a href="factorial.html">Factorial</a></li>
-        <li><a href="fibonacci.html">Fibonacci</a></li>
-        <li><a href="forloop.html">For Loop</a></li>
-        <li><a href="form.html">Form</a></li>
-        <li><a href="loginpage.html">Login Page</a></li>
-        <li><a href="maximum.html">Maximum Number</a></li>
-        <li><a href="minimum.html">Minimum Number</a></li>
-        <li><a href="mouse.html">Mouse Events</a></li>
-        <li><a href="negpos.html">Negative or Positive</a></li>
-        <li><a href="oddeven.html">Odd or Even</a></li>
-        <li><a href="search.html">Search</a></li>
-        <li><a href="sign.html">Sign In</a></li>
-        <li><a href="signupvalidation.html">Signup Validation</a></li>
-        <li><a href="smartcanteen.html">Smart Canteen</a></li>
-        <li><a href="student.html">Student</a></li>
-        <li><a href="studentdetails.html">Student Details</a></li>
-        <li><a href="summary.html">Summary</a></li>
-        <li><a href="test2nd.html">Test 2</a></li>
-        <li><a href="vowelcharacter.html">Vowel Character</a></li>
-    </ul>
+    <main class="container">
+
+        <div class="heading">
+            <h2>All Projects</h2>
+            <span id="count"></span>
+        </div>
+
+        <input
+            type="search"
+            id="search"
+            placeholder="Search projects by name..."
+            aria-label="Search projects"
+        >
+
+        <section class="project-grid" id="projectGrid"></section>
+
+        <div id="empty">
+            <h3>No project found!</h3>
+            <p>Try another project name.</p>
+        </div>
+
+    </main>
+
+    <footer>
+        SME Projects Collection | Made with HTML, CSS & JavaScript
+    </footer>
+
+    <script>
+        const projects = [
+            ["agecategory.html", "Age Category Program"],
+            ["array.html", "Array Practice"],
+            ["calculator.html", "Calculator"],
+            ["days.html", "Days Program"],
+            ["emailvalidation.html", "Email Validation"],
+            ["employee.html", "Employee Management"],
+            ["evenarray.html", "Even Array Elements"],
+            ["factorial.html", "Factorial Program"],
+            ["fibonacci.html", "Fibonacci Series"],
+            ["forloop.html", "For Loop Practice"],
+            ["form.html", "HTML Form"],
+            ["loginpage.html", "Login Page"],
+            ["maximum.html", "Find Maximum Number"],
+            ["minimum.html", "Find Minimum Number"],
+            ["mouse.html", "Mouse Events"],
+            ["negpos.html", "Negative or Positive"],
+            ["oddeven.html", "Odd or Even"],
+            ["search.html", "Search Program"],
+            ["sign.html", "Sign Program"],
+            ["signup.html", "Signup Page"],
+            ["signupvalidation.html", "Signup Validation"],
+            ["smartcanteen.html", "Smart Canteen"],
+            ["student.html", "Student Project"],
+            ["studentdetails.html", "Student Details"],
+            ["summary.html", "Summary Program"],
+            ["test2nd.html", "Test 2nd"],
+            ["vowelcharacter.html", "Vowel Character"]
+        ];
+
+        const projectGrid = document.getElementById("projectGrid");
+        const searchInput = document.getElementById("search");
+        const count = document.getElementById("count");
+        const empty = document.getElementById("empty");
+
+        function displayProjects() {
+            const query = searchInput.value.trim().toLowerCase();
+
+            const filteredProjects = projects.filter(project =>
+                (project[0] + " " + project[1]).toLowerCase().includes(query)
+            );
+
+            projectGrid.replaceChildren();
+
+            filteredProjects.forEach(project => {
+                const [file, title] = project;
+
+                const card = document.createElement("a");
+                card.className = "project-card";
+
+                // Each HTML file should be in the same folder as index.html.
+                card.href = encodeURIComponent(file);
+
+                const icon = document.createElement("div");
+                icon.className = "icon";
+                icon.textContent = title.charAt(0);
+
+                const heading = document.createElement("h3");
+                heading.textContent = title;
+
+                const description = document.createElement("p");
+                description.textContent = file;
+
+                const open = document.createElement("span");
+                open.className = "open";
+                open.textContent = "Open Project →";
+
+                card.append(icon, heading, description, open);
+                projectGrid.appendChild(card);
+            });
+
+            count.textContent =
+                filteredProjects.length + " / " + projects.length + " projects";
+
+            empty.style.display =
+                filteredProjects.length === 0 ? "block" : "none";
+        }
+
+        searchInput.addEventListener("input", displayProjects);
+
+        displayProjects();
+    </script>
 
 </body>
 </html>
